@@ -1,0 +1,8 @@
+# Mac OS X
+.DS_Store
+
+# Jekyll
+_site
+
+# Sass / SCSS
+.sass-cache

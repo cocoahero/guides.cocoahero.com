@@ -1,0 +1,100 @@
+@import "global";
+
+* {
+    margin: 0;
+    padding: 0;
+    @include box-sizing(border-box);
+}
+
+html, body {
+    height: 100%;
+}
+
+div#mosaic {
+    @include clearfix;
+    
+    div.mosaic-tile {
+        width: 20%;
+        height: 10px;
+        float: left;
+        
+        &:nth-child(1) {
+            background-color: $primary-color;
+        }
+        &:nth-child(2) {
+            background-color: $secondary-color;
+        }
+        &:nth-child(3) {
+            background-color: $tertiary-color;
+        }
+        &:nth-child(4) {
+            background-color: $secondary-color;
+        }
+        &:nth-child(5) {
+            background-color: $primary-color;
+        }
+    }
+}
+
+div#content {
+    width: 90%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+div#content > header {
+    padding: 25px 15px;
+    text-align: center;
+    font-family: "Open Sans Condensed", sans-serif;
+    
+    h1 {
+        font-size: 64px;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: $primary-color;
+    }
+    
+    span#subtitle {
+        font-weight: 300;
+        font-size: 32px;
+        text-transform: capitalize;
+    }
+}
+
+div#snippets {
+    @include clearfix;
+    border-top: 2px solid $secondary-color;
+    font-family: "Open Sans Condensed", sans-serif;
+}
+
+div.snippet {
+    width: 50%;
+    padding: 15px;
+    float: left;
+    
+    &:first-child {
+        width: 100%;
+        padding-top: 25px;
+    }
+    
+    h2 {
+        font-weight: 700;
+        font-size: 28px;
+        text-transform: capitalize;
+    }
+    
+    p.summary {
+        font-weight: 300;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 18px;
+    }
+    
+    a {
+        color: $primary-color;
+        text-decoration: none;
+        
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
