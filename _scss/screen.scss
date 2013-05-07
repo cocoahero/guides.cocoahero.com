@@ -46,6 +46,7 @@ div#content > header {
     padding: 25px 15px;
     text-align: center;
     font-family: "Open Sans Condensed", sans-serif;
+    border-bottom: 2px solid $secondary-color;
     
     h1 {
         font-size: 64px;
@@ -63,7 +64,6 @@ div#content > header {
 
 div#snippets {
     @include clearfix;
-    border-top: 2px solid $secondary-color;
     font-family: "Open Sans Condensed", sans-serif;
 }
 

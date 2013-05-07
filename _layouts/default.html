@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    {% include head.html %}
+    <body>
+        <div id="mosaic">
+            <div class="mosaic-tile"></div>
+            <div class="mosaic-tile"></div>
+            <div class="mosaic-tile"></div>
+            <div class="mosaic-tile"></div>
+            <div class="mosaic-tile"></div>
+        </div>
+        <div id="content">
+            <header>
+                <h1>Cocoahero's Guides</h1>
+                <span id="subtitle">A collection of tutorials on all things programming</span>
+            </header>
+            {{ content }}
+        </div>
+    </body>
+</html>
