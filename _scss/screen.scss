@@ -44,57 +44,102 @@ div#content {
 
 div#content > header {
     padding: 25px 15px;
+    margin-bottom: 25px;
     text-align: center;
     font-family: "Open Sans Condensed", sans-serif;
     border-bottom: 2px solid $secondary-color;
     
     h1 {
+        margin: 0;
         font-size: 64px;
         font-weight: 300;
         text-transform: uppercase;
         color: $primary-color;
     }
     
-    span#subtitle {
+    h2 {
+        margin: 0;
+        color: #000;
         font-weight: 300;
         font-size: 32px;
         text-transform: capitalize;
+    }
+    
+    a {
+        color: inherit;
+        text-decoration: none;
     }
 }
 
 div#snippets {
     @include clearfix;
-    font-family: "Open Sans Condensed", sans-serif;
 }
 
 div.snippet {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
     width: 50%;
     padding: 15px;
     float: left;
     
     &:first-child {
         width: 100%;
-        padding-top: 25px;
+        padding-top: 0px;
     }
     
     h2 {
-        font-weight: 700;
         font-size: 28px;
-        text-transform: capitalize;
+        margin: 0;
+        margin-bottom: 5px;
     }
+}
+
+article {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Open Sans Condensed", sans-serif;
+    color: $primary-color;
+    margin: 0.5em 0px;
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+a {
+    color: $tertiary-color;
+    text-decoration: none;
     
-    p.summary {
-        font-weight: 300;
-        font-family: 'Source Sans Pro', sans-serif;
-        font-size: 18px;
+    &:hover {
+        text-decoration: underline;
     }
-    
-    a {
-        color: $primary-color;
-        text-decoration: none;
+}
+
+ol, ul {
+    margin: 1em;
+    margin-left: 1cm;
+}
+
+ul.inline {
+    list-style-type: none;
+    li {
+        display: inline;
+        padding: 0px 10px;
+        border-right: 1px solid #000;
         
-        &:hover {
-            text-decoration: underline;
+        &:last-child {
+            border: none;
         }
     }
+}
+
+footer {
+    padding: 5px;
+    margin-top: 25px;
+    text-align: center;
+    font-family: "Open Sans Condensed", sans-serif;
+    border-top: 2px solid $secondary-color;
 }
