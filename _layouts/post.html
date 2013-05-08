@@ -6,9 +6,13 @@
         <div id="content">
             <header>
                 <h1><a href="/">Cocoahero's Guides</a></h1>
-                <h2>A collection of tutorials on all things programming</h2>
+                {% if page.title %}
+                <h2>{{ page.title }}</h2>
+                {% endif %}
             </header>
-            {{ content }}
+            <article>
+                {{ content }}
+            </article>
             {% include footer.html %}
         </div>
     </body>
