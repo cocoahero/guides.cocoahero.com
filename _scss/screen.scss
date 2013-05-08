@@ -105,8 +105,11 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "Open Sans Condensed", sans-serif;
     color: $primary-color;
     margin: 0.5em 0px;
-    text-transform: capitalize;
     font-weight: 700;
+}
+
+p {
+    margin-bottom: 1.0em;
 }
 
 a {
@@ -121,6 +124,15 @@ a {
 ol, ul {
     margin: 1em;
     margin-left: 1cm;
+}
+
+code {
+    font-family: 'Source Code Pro', sans-serif;
+    color: #555;
+}
+
+.gist {
+    font-size: 12px;
 }
 
 ul.inline {
