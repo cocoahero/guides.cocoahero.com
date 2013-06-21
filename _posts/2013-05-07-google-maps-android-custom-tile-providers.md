@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Android Google Maps SDK v2 - Custom Tile Providers"
+author: "Jonathan Baker"
 summary: "The Google Maps SDK v2 for Android allows great flexibility. Providing custom tiles is just one of the many features available. In this inaugural guide, you will learn how you can use your own tiles with ease."
 tags:
     - Android

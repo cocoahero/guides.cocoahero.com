@@ -1,21 +1,28 @@
 <head>
     {% if page.title %}
     <title>{{ page.title }} | Cocoahero's Guides</title>
+    <meta content="{{ page.title }}" property="og:title"/>
     {% else %}
     <title>Cocoahero's Guides</title>
+    <meta content="Cocoahero's Guides" property="og:title"/>
     {% endif %}
+    <meta name="revisit-after" content="3 days"/>
+    <meta content="http://guides.cocoahero.com{{ page.url }}" property="og:url"/>
     <meta name="google-site-verification" content="O8OUFRK4tl8bP6ye2ASjE8FUWRP8fb53ZrbQrP6XRzo" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     {% if page.tags %}
     <meta name="keywords" content="{{ page.tags | join:',' }}" />
     {% endif %}
+    <meta content="Cocoahero's Guides" property="og:site_name"/>
     {% if page.summary %}
-    <meta name="description" content="{{page.summary}}" />
+    <meta name="description" content="{{ page.summary }}" />
+    <meta content="{{ page.summary }}" property="og:description" />
     {% endif %}
     {% if page.author %}
-    <meta name="author" content="{{page.author}}" />
+    <meta name="author" content="{{ page.author }}" />
     {% endif %}
     <link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen" charset="utf-8" />
+    <link rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/"/>
     <script type="text/javascript">
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-26607440-4']);

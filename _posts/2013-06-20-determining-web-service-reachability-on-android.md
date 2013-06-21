@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Determining Web Service Reachability on Android"
+author: "Jonathan Baker"
 summary: "Most mobile applications these days talk to a web service. Making sure you can reach your destination prior to performing any requests is good practice. In this guide, we will take a look at a thorough approach to do just that."
 tags:
     - Android
