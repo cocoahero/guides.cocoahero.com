@@ -132,9 +132,8 @@ ol, ul {
 }
 
 code {
-    font-family: 'Source Code Pro', sans-serif;
     color: #444;
-    font-weight: 700;
+    font-weight: bold;
 }
 
 .gist {
@@ -158,6 +157,7 @@ footer {
     padding: 5px;
     margin-top: 25px;
     text-align: center;
+    font-weight: 300;
     font-family: "Open Sans Condensed", sans-serif;
     border-top: 2px solid $secondary-color;
 }
