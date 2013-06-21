@@ -25,7 +25,7 @@ Each one of these conditions checks a specific stage of a request. Only when all
 
 The first step is to determine if the device is connected to a network. On Android, this can be determined by using the [ConnectivityManager][1] service. You retrieve an instance of this class by asking for it on a [Context][5], normally the current [Activity][6]. Once you have a ConnectivityManager, you can ask it for the currently active network information by calling [getActiveNetworkInfo()][3]. This will return a [NetworkInfo][2] object, or `null` if the device is currently not connected to any type of network. Finally, you can call [NetworkInfo#isConnected()][4] to ensure the device is connected to the active network. Below is what this looks like in code.
 
-{% gist cocoahero/063a3cbb4230d5f4f126 %}
+<script src="https://gist.github.com/cocoahero/063a3cbb4230d5f4f126.js"></script>
 
 ### Step Two: Hostname Resolution
 
@@ -33,7 +33,7 @@ Generally speaking, you connect to your web service using some sort of hostname.
 
 Apart of the Java Standard Library, and thus Android, is a class called [InetAddress][8]. An instance of this class represents an IP address and is created by calling one of the class factory methods. In our case, we want to use [InetAddress#getByName(String)][9] and pass in our web service's hostname. This method will either return an instance of `InetAddress` or throw an `UnknownHostException`. If this exception is thrown, we know that the DNS server was unable to resolve the hostname and should abort our request.
 
-{% gist cocoahero/017dbc8895fa00d6d3aa %}
+<script src="https://gist.github.com/cocoahero/017dbc8895fa00d6d3aa.js"></script>
 
 ### Step Three: Establishing a Connection
 
@@ -41,7 +41,7 @@ We've now determined the device is on a network and can resolve the hostname. Yo
 
 By using the `InetAddress` instance we were returned in the previous step, we can open a simple TCP socket to our web service on a given port. For most web services this will be port 80, or 443 if you utilize HTTPS. [TCP sockets][11] are another feature of the Java Standard Library that is available on Android. The code shown below demonstrates how to open a socket.
 
-{% gist cocoahero/e1bc6bf5a1a888d62d2b %}
+<script src="https://gist.github.com/cocoahero/e1bc6bf5a1a888d62d2b.js"></script>
 
 ### The Main Thread and You
 
@@ -49,11 +49,11 @@ The last step is to simply combine all of the previous three into an easy to use
 
 Android provides a handy class that will suit us perfectly for solving our threading woes: [AsyncTask][13]. By performing all of our checks within the `#doInBackground()` method, we will stay off the main thread and avoid the strict exception. Now because our API is now asynchronous, we need a way to communicate the results back to the caller. This can be done with a simple callback interface, as shown below.
 
-{% gist cocoahero/01a24c4fcccf40dcdd99 ReachabilityTest.java %}
+<script src="https://gist.github.com/cocoahero/01a24c4fcccf40dcdd99.js?file=ReachabilityTest.java"></script>
 
 To use your newly made reachability test, simply create a new anonymous instance and provide a callback. The methods within the callback will be called on the main thread so you can modify the user interface safely.
 
-{% gist cocoahero/01a24c4fcccf40dcdd99 MyActivity.java %}
+<script src="https://gist.github.com/cocoahero/01a24c4fcccf40dcdd99.js?file=MyActivity.java"></script>
 
 ### Summary
 
