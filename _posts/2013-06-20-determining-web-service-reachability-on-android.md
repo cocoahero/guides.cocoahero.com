@@ -11,7 +11,7 @@ tags:
 ---
 It is pretty common for a mobile application to communicate with some sort of web service. Generally, this process is triggered by some sort of user interaction. If the user taps a button labeled "refresh news feed", he or she expects exactly that to happen. What happens if the device isn't connected to the Internet? Whether it is because of airplane mode or bad cellular signal, it is important to let the user know that what they requested won't happen and more importantly, why.
 
-The solution to this is to do what is known as a reachability test before performing the actual we service request. If the test fails, we can notify the user immediately via an alert dialog or by some other means. We could also disable functionality to prevent the user from trying again. If we skip this step, the request would be attempted and would eventually fail wasting not only computational time, but also the user's.
+The solution to this is to do what is known as a reachability test before performing the actual web service request. If the test fails, we can notify the user immediately via an alert dialog or by some other means. We could also disable functionality to prevent the user from trying again. If we skip this step, the request would be attempted and would eventually fail wasting not only computational time, but also the user's.
 
 Determining reachability to a web service involves checking three conditions.
 
