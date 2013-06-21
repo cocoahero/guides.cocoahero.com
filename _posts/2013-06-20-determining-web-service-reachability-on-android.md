@@ -48,7 +48,7 @@ By using the `InetAddress` instance we were returned in the previous step, we ca
 
 The last step is to simply combine all of the previous three into an easy to use API. Now if you have done some networking related development on Android before, you may wondering about doing all of this on the main thread. For those of you who don't know, if you target at least Honeycomb (API 11) and you do any sort of network activity on the main thread, **your application will crash** with a [NetworkOnMainThreadException][12]. While this seems rather strict and rude, it is for a good reason. Blocking the main thread with network activity will make the user interface unresponsive and will result in a poor user experience. Simply put, you should **never** perform network activity on the main thread. Just say no.
 
-Android provides a handy class that will suit us perfectly for solving our threading woes: [AsyncTask][13]. By performing all of our checks within the `#doInBackground()` method, we will stay off the main thread and avoid the strict exception. Now because our API is asynchronous, we need a way to communicate the results back to the caller. This can be done with a simple callback interface, as shown below.
+Android provides a handy class that will suit us perfectly for solving our threading woes: [AsyncTask][13]. By performing all of our checks within the `#doInBackground()` method, we will stay off the main thread and avoid the strict exception. Now that our API is asynchronous, we need a way to communicate the results back to the caller. This can be done with a simple callback interface, as shown below.
 
 <script src="https://gist.github.com/cocoahero/01a24c4fcccf40dcdd99.js?file=ReachabilityTest.java"></script>
 
